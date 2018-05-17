@@ -1,7 +1,7 @@
 var pageComponent =
-webpackJsonppageComponent([0],{
+webpackJsonppageComponent([3],{
 
-/***/ 266:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43,9 +43,9 @@ __webpack_require__(15);
 
 __webpack_require__(16);
 
-var _indexSoy = __webpack_require__(267);
+var _step_3Soy = __webpack_require__(289);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _step_3Soy2 = _interopRequireDefault(_step_3Soy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55,27 +55,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var qNyCl = function (_Component) {
+  _inherits(qNyCl, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function qNyCl() {
+    _classCallCheck(this, qNyCl);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qNyCl.__proto__ || Object.getPrototypeOf(qNyCl)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return qNyCl;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tutorialsIndex, _indexSoy2.default);
+_metalSoy2.default.register(qNyCl, _step_3Soy2.default);
 
-exports.default = tutorialsIndex;
+exports.default = qNyCl;
 
 /***/ }),
 
-/***/ 267:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ exports.default = tutorialsIndex;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.templates = exports.tutorialsIndex = undefined;
+exports.templates = exports.qNyCl = undefined;
 
 var _metalComponent = __webpack_require__(1);
 
@@ -106,15 +106,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var templates;
 goog.loadModule(function (exports) {
 
-  // This file was automatically generated from index.soy.
+  // This file was automatically generated from step_3.soy.
   // Please don't edit this file by hand.
 
   /**
-   * @fileoverview Templates in namespace tutorialsIndex.
+   * @fileoverview Templates in namespace qNyCl.
    * @public
    */
 
-  goog.module('tutorialsIndex.incrementaldom');
+  goog.module('qNyCl.incrementaldom');
 
   /** @suppress {extraRequire} */
   var soy = goog.require('soy');
@@ -137,9 +137,15 @@ goog.loadModule(function (exports) {
   var itext = IncrementalDom.text;
   var iattr = IncrementalDom.attr;
 
+  var $templateAlias2 = _metalSoy2.default.getTemplate('ElectricCode.incrementaldom', 'render');
+
+  var $templateAlias1 = _metalSoy2.default.getTemplate('tutorial.incrementaldom', 'render');
+
   /**
    * @param {{
-   *    page: (?)
+   *    page: (?),
+   *    site: (?),
+   *    elementClasses: (?)
    * }} opt_data
    * @param {(null|undefined)=} opt_ignored
    * @param {Object<string, *>=} opt_ijData
@@ -147,44 +153,51 @@ goog.loadModule(function (exports) {
    * @suppress {checkTypes}
    */
   function $render(opt_data, opt_ignored, opt_ijData) {
-    ie_open('html', null, null, 'lang', 'en');
-    ie_open('head');
-    ie_open('meta', null, null, 'charset', 'UTF-8');
-    ie_close('meta');
-    ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-    ie_close('meta');
-    ie_close('head');
-    ie_close('html');
+    var param679 = function param679() {
+      ie_open('h2');
+      var dyn36 = opt_data.page.title;
+      if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
+      ie_close('h2');
+      ie_open('p');
+      itext('T.apex offers a lot of easy-to-use expectations for your assertions.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.expect(true).toBe(true);\nT.expect(5).toEqual(5);\nT.expect(\'abc\').toMatch(\'.*b.*\');\nT.expect(null).toBeNull();\nT.expect(true).toBeTrue();\nT.expect(false).toBeFalse();\nT.expect(\'abc\').toContain(\'b\');\nT.expect(2).toBeLessThan(3);\nT.expect(3).toBeGreaterThan(2);\nT.fail(\'Should fail here\');', mode: 'javascript' }, null, opt_ijData);
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+      ie_close('input');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+      ie_close('input');
+    };
+    $templateAlias1(soy.$$assignDefaults({ content: param679 }, opt_data), null, opt_ijData);
   }
   exports.render = $render;
   if (goog.DEBUG) {
-    $render.soyTemplateName = 'tutorialsIndex.render';
+    $render.soyTemplateName = 'qNyCl.render';
   }
 
-  exports.render.params = ["page"];
-  exports.render.types = { "page": "?" };
+  exports.render.params = ["page", "site"];
+  exports.render.types = { "page": "?", "site": "?" };
   exports.templates = templates = exports;
   return exports;
 });
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var qNyCl = function (_Component) {
+  _inherits(qNyCl, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function qNyCl() {
+    _classCallCheck(this, qNyCl);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qNyCl.__proto__ || Object.getPrototypeOf(qNyCl)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return qNyCl;
 }(_metalComponent2.default);
 
-_metalSoy2.default.register(tutorialsIndex, templates);
-exports.tutorialsIndex = tutorialsIndex;
+_metalSoy2.default.register(qNyCl, templates);
+exports.qNyCl = qNyCl;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
 
 /***/ })
 
-},[266]);
+},[288]);

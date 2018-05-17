@@ -1,7 +1,7 @@
 var pageComponent =
-webpackJsonppageComponent([0],{
+webpackJsonppageComponent([2],{
 
-/***/ 266:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43,9 +43,9 @@ __webpack_require__(15);
 
 __webpack_require__(16);
 
-var _indexSoy = __webpack_require__(267);
+var _step_4Soy = __webpack_require__(291);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _step_4Soy2 = _interopRequireDefault(_step_4Soy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55,27 +55,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var adzbC = function (_Component) {
+  _inherits(adzbC, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function adzbC() {
+    _classCallCheck(this, adzbC);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (adzbC.__proto__ || Object.getPrototypeOf(adzbC)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return adzbC;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tutorialsIndex, _indexSoy2.default);
+_metalSoy2.default.register(adzbC, _step_4Soy2.default);
 
-exports.default = tutorialsIndex;
+exports.default = adzbC;
 
 /***/ }),
 
-/***/ 267:
+/***/ 291:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ exports.default = tutorialsIndex;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.templates = exports.tutorialsIndex = undefined;
+exports.templates = exports.adzbC = undefined;
 
 var _metalComponent = __webpack_require__(1);
 
@@ -106,15 +106,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var templates;
 goog.loadModule(function (exports) {
 
-  // This file was automatically generated from index.soy.
+  // This file was automatically generated from step_4.soy.
   // Please don't edit this file by hand.
 
   /**
-   * @fileoverview Templates in namespace tutorialsIndex.
+   * @fileoverview Templates in namespace adzbC.
    * @public
    */
 
-  goog.module('tutorialsIndex.incrementaldom');
+  goog.module('adzbC.incrementaldom');
 
   /** @suppress {extraRequire} */
   var soy = goog.require('soy');
@@ -137,9 +137,15 @@ goog.loadModule(function (exports) {
   var itext = IncrementalDom.text;
   var iattr = IncrementalDom.attr;
 
+  var $templateAlias2 = _metalSoy2.default.getTemplate('ElectricCode.incrementaldom', 'render');
+
+  var $templateAlias1 = _metalSoy2.default.getTemplate('tutorial.incrementaldom', 'render');
+
   /**
    * @param {{
-   *    page: (?)
+   *    page: (?),
+   *    site: (?),
+   *    elementClasses: (?)
    * }} opt_data
    * @param {(null|undefined)=} opt_ignored
    * @param {Object<string, *>=} opt_ijData
@@ -147,44 +153,71 @@ goog.loadModule(function (exports) {
    * @suppress {checkTypes}
    */
   function $render(opt_data, opt_ignored, opt_ijData) {
-    ie_open('html', null, null, 'lang', 'en');
-    ie_open('head');
-    ie_open('meta', null, null, 'charset', 'UTF-8');
-    ie_close('meta');
-    ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-    ie_close('meta');
-    ie_close('head');
-    ie_close('html');
+    var param695 = function param695() {
+      ie_open('h2');
+      var dyn37 = opt_data.page.title;
+      if (typeof dyn37 == 'function') dyn37();else if (dyn37 != null) itext(dyn37);
+      ie_close('h2');
+      ie_open('p');
+      itext('First, we will create a mock of Func.');
+      ie_close('p');
+      $templateAlias2({ code: 'Func mock = (Func)T.mock(Func.class);', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Then we will establish the mocking method behavior. We can mock by returning a value.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.when(mock.run(0)).thenReturn(0);\n// When mock calls \'run\' with 0, return 0', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Or we can mock by throwing an exception.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.when(mock.run(0)).thenThrow(new T.TestException(\'test\'));\n// When mock calls \'run\' with 0, throw the exception', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Or we can mock by using a Func as an answer.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.when(mock.run(0)).thenAnswer(R.inc);\n// When mock calls \'run\' with 0, apply the answer Func to the arguments\n// and return the result', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Besides, we can use argument matcher to capture method invocation more precisely.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.when(mock.run(T.anyBoolean(R.isNotNull))).thenReturn(0);\n// When mock calls \'run\' with any Boolean that is not null, return 0', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Finally, let\'s verify the mocks.');
+      ie_close('p');
+      $templateAlias2({ code: 'mock.run(0);\n\nT.verify(mock, \'run\').toHaveBeenCalled();', mode: 'javascript' }, null, opt_ijData);
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+      ie_close('input');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+      ie_close('input');
+    };
+    $templateAlias1(soy.$$assignDefaults({ content: param695 }, opt_data), null, opt_ijData);
   }
   exports.render = $render;
   if (goog.DEBUG) {
-    $render.soyTemplateName = 'tutorialsIndex.render';
+    $render.soyTemplateName = 'adzbC.render';
   }
 
-  exports.render.params = ["page"];
-  exports.render.types = { "page": "?" };
+  exports.render.params = ["page", "site"];
+  exports.render.types = { "page": "?", "site": "?" };
   exports.templates = templates = exports;
   return exports;
 });
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var adzbC = function (_Component) {
+  _inherits(adzbC, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function adzbC() {
+    _classCallCheck(this, adzbC);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (adzbC.__proto__ || Object.getPrototypeOf(adzbC)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return adzbC;
 }(_metalComponent2.default);
 
-_metalSoy2.default.register(tutorialsIndex, templates);
-exports.tutorialsIndex = tutorialsIndex;
+_metalSoy2.default.register(adzbC, templates);
+exports.adzbC = adzbC;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
 
 /***/ })
 
-},[266]);
+},[290]);

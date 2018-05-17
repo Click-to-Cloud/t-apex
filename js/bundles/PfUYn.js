@@ -1,7 +1,7 @@
 var pageComponent =
-webpackJsonppageComponent([0],{
+webpackJsonppageComponent([11],{
 
-/***/ 266:
+/***/ 278:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43,9 +43,9 @@ __webpack_require__(15);
 
 __webpack_require__(16);
 
-var _indexSoy = __webpack_require__(267);
+var _verificationSoy = __webpack_require__(279);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _verificationSoy2 = _interopRequireDefault(_verificationSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55,27 +55,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var PfUYn = function (_Component) {
+  _inherits(PfUYn, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function PfUYn() {
+    _classCallCheck(this, PfUYn);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PfUYn.__proto__ || Object.getPrototypeOf(PfUYn)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return PfUYn;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tutorialsIndex, _indexSoy2.default);
+_metalSoy2.default.register(PfUYn, _verificationSoy2.default);
 
-exports.default = tutorialsIndex;
+exports.default = PfUYn;
 
 /***/ }),
 
-/***/ 267:
+/***/ 279:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ exports.default = tutorialsIndex;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.templates = exports.tutorialsIndex = undefined;
+exports.templates = exports.PfUYn = undefined;
 
 var _metalComponent = __webpack_require__(1);
 
@@ -106,15 +106,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var templates;
 goog.loadModule(function (exports) {
 
-  // This file was automatically generated from index.soy.
+  // This file was automatically generated from verification.soy.
   // Please don't edit this file by hand.
 
   /**
-   * @fileoverview Templates in namespace tutorialsIndex.
+   * @fileoverview Templates in namespace PfUYn.
    * @public
    */
 
-  goog.module('tutorialsIndex.incrementaldom');
+  goog.module('PfUYn.incrementaldom');
 
   /** @suppress {extraRequire} */
   var soy = goog.require('soy');
@@ -137,9 +137,14 @@ goog.loadModule(function (exports) {
   var itext = IncrementalDom.text;
   var iattr = IncrementalDom.attr;
 
+  var $templateAlias2 = _metalSoy2.default.getTemplate('ElectricCode.incrementaldom', 'render');
+
+  var $templateAlias1 = _metalSoy2.default.getTemplate('guide.incrementaldom', 'render');
+
   /**
    * @param {{
-   *    page: (?)
+   *    page: (?),
+   *    site: (?)
    * }} opt_data
    * @param {(null|undefined)=} opt_ignored
    * @param {Object<string, *>=} opt_ijData
@@ -147,44 +152,97 @@ goog.loadModule(function (exports) {
    * @suppress {checkTypes}
    */
   function $render(opt_data, opt_ignored, opt_ijData) {
-    ie_open('html', null, null, 'lang', 'en');
-    ie_open('head');
-    ie_open('meta', null, null, 'charset', 'UTF-8');
-    ie_close('meta');
-    ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-    ie_close('meta');
-    ie_close('head');
-    ie_close('html');
+    var param455 = function param455() {
+      ie_open('h6');
+      var dyn32 = opt_data.page.description;
+      if (typeof dyn32 == 'function') dyn32();else if (dyn32 != null) itext(dyn32);
+      ie_close('h6');
+      ie_open('article', null, null, 'id', '1');
+      ie_open('h2');
+      itext('How to Verify Mock Behavior');
+      ie_close('h2');
+      ie_open('p');
+      itext('After the mock has been used, we can verify mock methods have been used as we expected.');
+      ie_close('p');
+      $templateAlias2({ code: 'T.verify(mock, \'run\').toHaveBeenCalled();', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('We have three ways to verify mock method behaviors.');
+      ie_close('p');
+      ie_open('table');
+      ie_open('thead');
+      ie_open('tr');
+      ie_open('th');
+      itext('Method');
+      ie_close('th');
+      ie_open('th');
+      itext('Description');
+      ie_close('th');
+      ie_close('tr');
+      ie_close('thead');
+      ie_open('tbody');
+      ie_open('tr');
+      ie_open('td');
+      itext('toHaveBeenCalled()');
+      ie_close('td');
+      ie_open('td');
+      itext('To verify that the method has been called');
+      ie_close('td');
+      ie_close('tr');
+      ie_open('tr');
+      ie_open('td');
+      itext('toHaveBeenCalledTimes(Integer)');
+      ie_close('td');
+      ie_open('td');
+      itext('To verify that the method has been called N times');
+      ie_close('td');
+      ie_close('tr');
+      ie_open('tr');
+      ie_open('td');
+      itext('toHaveBeenCalledWith(List<Object>)');
+      ie_close('td');
+      ie_open('td');
+      itext('To verify that the method has been called with the given arguments');
+      ie_close('td');
+      ie_close('tr');
+      ie_close('tbody');
+      ie_close('table');
+      ie_close('article');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+      ie_close('input');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+      ie_close('input');
+    };
+    $templateAlias1(soy.$$assignDefaults({ content: param455 }, opt_data), null, opt_ijData);
   }
   exports.render = $render;
   if (goog.DEBUG) {
-    $render.soyTemplateName = 'tutorialsIndex.render';
+    $render.soyTemplateName = 'PfUYn.render';
   }
 
-  exports.render.params = ["page"];
-  exports.render.types = { "page": "?" };
+  exports.render.params = ["page", "site"];
+  exports.render.types = { "page": "?", "site": "?" };
   exports.templates = templates = exports;
   return exports;
 });
 
-var tutorialsIndex = function (_Component) {
-  _inherits(tutorialsIndex, _Component);
+var PfUYn = function (_Component) {
+  _inherits(PfUYn, _Component);
 
-  function tutorialsIndex() {
-    _classCallCheck(this, tutorialsIndex);
+  function PfUYn() {
+    _classCallCheck(this, PfUYn);
 
-    return _possibleConstructorReturn(this, (tutorialsIndex.__proto__ || Object.getPrototypeOf(tutorialsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PfUYn.__proto__ || Object.getPrototypeOf(PfUYn)).apply(this, arguments));
   }
 
-  return tutorialsIndex;
+  return PfUYn;
 }(_metalComponent2.default);
 
-_metalSoy2.default.register(tutorialsIndex, templates);
-exports.tutorialsIndex = tutorialsIndex;
+_metalSoy2.default.register(PfUYn, templates);
+exports.PfUYn = PfUYn;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
 
 /***/ })
 
-},[266]);
+},[278]);

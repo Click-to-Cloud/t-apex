@@ -1,7 +1,7 @@
 var pageComponent =
 webpackJsonppageComponent([9],{
 
-/***/ 264:
+/***/ 262:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ __webpack_require__(15);
 
 __webpack_require__(16);
 
-var _indexSoy = __webpack_require__(265);
+var _indexSoy = __webpack_require__(263);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -75,7 +75,7 @@ exports.default = pageDocsIndex;
 
 /***/ }),
 
-/***/ 265:
+/***/ 263:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -157,7 +157,7 @@ goog.loadModule(function (exports) {
     ie_open('div', null, null, 'class', 'main');
     ie_open('main', null, null, 'class', 'content');
     ie_open('div', null, null, 'class', 'docs');
-    $templateAlias1({ items: opt_data.site.topbar, style: 'topbar-light topbar-docs', logo: { text: opt_data.site.title, icon: 'icon-16-hammer' } }, null, opt_ijData);
+    $templateAlias1({ items: opt_data.site.topbar, style: 'topbar-light topbar-docs', logo: { text: opt_data.site.title, href: '/t-apex', icon: 'icon-16-hammer' } }, null, opt_ijData);
     $templateAlias2({ section: opt_data.site.index.children['docs'], site: opt_data.site }, null, opt_ijData);
     $topics(opt_data, null, opt_ijData);
     ie_close('div');
@@ -286,4 +286,4 @@ exports.default = templates;
 
 /***/ })
 
-},[264]);
+},[262]);
